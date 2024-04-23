@@ -15,19 +15,19 @@ var main = function() {
 
     //Muted Button
     //This will assign the variable muted with true or false
-    muted = $("player").prop('muted');
-    //This will mute the player
-    $("player").prop('muted', true);
-
-    $('#mute').click(function(){
-        $('#message').text("Track muted");
-        $('#player').trigger("mute");
+   $('#mute').click(function(){
+        if (!$('#player').prop('muted')) {
+            $('#player').prop('muted', true);
+            $('#message').text("Track muted");
+        }
     });
 
     //unmute button
     $('#unmute').click(function(){
-        $('#message').text("Track unmuted");
-        $('#player').trigger("unmute");
+        if ($('#player').prop('muted')) {
+            $('#player').prop('muted', false);
+            $('#message').text("Track unmuted");
+        }
     });
 
     //this is the STOP button!
