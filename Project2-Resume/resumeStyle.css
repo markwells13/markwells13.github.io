@@ -1,6 +1,6 @@
 body {
   background-image: 
-   url("/images/Background.jpg");
+   url("images/Background.jpg");
 }
 
 p, h1, h2, h3, h4, h5, h6, li, th, td {
